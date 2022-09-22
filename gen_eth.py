@@ -97,15 +97,7 @@ def mnemonic_to_eth(mnemonic_words: str, account_number: int = 0, address_index:
             "address": public_key.address()}
 
 
-class Man():
-    object1 = 10
-    object = f"qwe {object1 + 1}"
 
-    def __init__(self):
-        ogr = 10 if self.object1 == 0 else 0
-
-    def define(self, param):
-        pass
 
 
 if __name__ == '__main__':
