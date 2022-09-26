@@ -97,7 +97,6 @@ def pars_mnemonic_mask(mnemonic_mask: str) -> tuple:
 
     # now is list
     queue_tuple = [[i] if i.count('?') + i.count('*') + i.count('@') == 0 else [] for i in mnemonic_mask_list]
-    # print(queue_tuple)
     for num_elem, element in enumerate(queue_tuple):
         if element == []:
             if mnemonic_mask_list[num_elem].count("?"):
@@ -147,8 +146,6 @@ class Counter:
     def check_word_position(self):
         for position, elem_run_count in enumerate(self.run_count):
             word_pos = elem_run_count + self.next_count[position]
-            # print(self.next_count)
-            # print(self.run_count)
             if word_pos > self.stable_count[position]:
                 if position == self.enumerate_mask[0][0]:
                     print("End. No found")
@@ -191,15 +188,8 @@ if __name__ == "__main__":
             mnemonic_list = file.read().strip().split('\n')
 
     tuple_mask = pars_mnemonic_mask(SS.mnemonic_mask)
-
-    # print(tuple_mask)
-
     CC = Counter(tuple_mask)
-    #
-    # print(CC.get_words())
-    # print(CC.get_words())
 
-    # exit()
     print("Start Repair")
     num_word = 0
     while True:
@@ -212,11 +202,4 @@ if __name__ == "__main__":
             with open(f'{SS.needed_address}.txt', "w") as founded:
                 founded.write(str(result))
             break
-    # for num_word, word in enumerate(mnemonic_list):
-    #     if num_word % 10 == 0:
-    #         print(num_word)
-    #     var_mnem = ' '.join([i if i != "?" else word for i in tuple_mask])
-    #     result = check_pool_addresses(var_mnem, SS.needed_address, SS.account_depth, SS.address_depth)
-    #     if result:
-    #         print(result)
-    #         break
+
