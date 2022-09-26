@@ -1,6 +1,6 @@
         {
           "online_mode": false,
           "needed_address": "0x5B2F449F35E37dDe995e51430a7AF9aCa1Af2176",
-          "mnemonic_mask": "acquire slight ? south similar nation noble change mass grass salmon float coyote hip potato",
-          "search_depth": "1x2"
+          "mnemonic_mask": "change@1 slight@1 alone* south similar nation noble acquire@1 mass grass salmon float coyote hip potato",
+          "search_depth": "1x20"
         }

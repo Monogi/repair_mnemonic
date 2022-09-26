@@ -1,6 +1,7 @@
 # repair_mnemonic
  
-Brute force mnemonic words with Py3
+Brute force mnemonic words with Py3 for eth addresses
+mnemonic 12 15 18 21 24
 
 # Config file
 online_mode: "true/false". Responsible for how we will get a list of mnemonic words from the github repository or locally
