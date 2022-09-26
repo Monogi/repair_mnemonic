@@ -17,7 +17,7 @@ mnemonic_mask: "Your@1 Mnemonic* ?  Word@1 Phrase". ? - unknown word, * - maybe 
 
 search_depth:"standart/minimal/10x20". Standart 10x20, minimal 1x1, your depth "{accounts}x{addresses}"
 
-#Start
+# Start
 python3 main.py
 
 # In the pipeline
