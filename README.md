@@ -1,24 +1,44 @@
 # repair_mnemonic
  
-Brute force mnemonic words with Py3 for Eth addresses
+Brute force mnemonic words with Py3 for **Ethereum** addresses
 
-It makes sense to use this if you forgot 1-2 words or forgot the order of words
+This script pick a mnemonic phrase for the address specified in the config file.
+
+**Does not check balance**
+
+Runs with mnemonic **12 15 18 21 24**
+
+It makes sense to use this if you forgot **1-2** words or forgot the order of words. 
 
 
-mnemonic 12 15 18 21 24
+First you need to update conf.json set Account and  mask
+* `*` checks first a possible word, then all the others.
+* `@group` rearranges words. There may be several groups.
+* `?` all words.
+
 
 
 # Config file
-online_mode: "true/false". Responsible for how we will get a list of mnemonic words from the github repository or locally
+ Responsible for how we will get a list of mnemonic words from the GitHub repository or locally
+    
+    online_mode: "true/false".
 
-needed_address: "0xADDRESS". Target address
+ Target address
 
-mnemonic_mask: "Your@1 Mnemonic* ?  Word@1 Phrase". ? - unknown word, * - maybe this word, @{int} - shift group
+    needed_address: "0xADDRESS".
 
-search_depth:"standart/minimal/10x20". Standart 10x20, minimal 1x1, your depth "{accounts}x{addresses}"
+ Mnemonic words. ? - unknown word, * - maybe this word, @{group} - shift group
+
+    mnemonic_mask: "Your@1 Mnemonic* ?  Word@1 Phrase". 
+
+ search_depth. Standard 1x5, minimal 1x1, your depth "{accounts}x{addresses}"
+    
+    search_depth:"standart/minimal/10x20". 
 
 # Start
-python3 main.py
+    pip install -r requirements.txt
+
+    python3 main.py
 
 # In the pipeline
 logging
