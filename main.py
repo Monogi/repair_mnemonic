@@ -7,8 +7,8 @@ import gen_eth
 
 class Settings:
     online_mode = False
-    account_depth = 10
-    address_depth = 20
+    account_depth = 1
+    address_depth = 5
 
     def __init__(self):
         self.mnemonic_mask = None
@@ -41,10 +41,10 @@ class Settings:
 
         search_depth = configfile.get("search_depth").lower()
         if not isinstance(search_depth, str):
-            print("loading encountered problems search_depth. Use standat(10x20)")
+            print("loading encountered problems search_depth. Use standat(1x5)")
 
-        elif search_depth == "standart":
-            print("Use standat(10x20)")
+        elif search_depth == "standard":
+            print("Use standat(1x5)")
         elif search_depth == "minimal":
             print("Use minimal(1x1)")
         elif search_depth.count("x"):
@@ -66,7 +66,7 @@ class Settings:
                   "online_mode": false,
                   "needed_address": "0x5B2F449F35E37dDe995e51430a7AF9aCa1Af2176",
                   "mnemonic_mask": "change@1 slight@1 alone* south similar nation noble acquire@1 mass grass salmon float coyote hip potato",
-                  "search depth": "standart"
+                  "search depth": "standard"
                    }""")
             input("Config file created\nChange configuration in conf.json\nPress any key...")
             exit(0)
